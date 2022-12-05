@@ -7,9 +7,11 @@ import org.junit.jupiter.api.Test;
 
 import br.com.cod3r.cm.modelo.Campo;
 
+
+
 public class CampoTeste {
 
-	private Campo campo;
+	public Campo campo;
 
 	@BeforeEach
 	void iniciarCampo() {
@@ -57,5 +59,21 @@ public class CampoTeste {
 		Campo vizinho = new Campo(1, 1);
 		boolean resultado = campo.adicionarVizinho(vizinho);
 		assertFalse(resultado);
+	}
+	
+	@Test
+	void testeValorPadraoAtributoMarcado() {
+		assertFalse(campo.isMarcado());
+	}
+	
+	@Test
+	void testeAlternarMarcacao() {
+		campo.alternarMarcacao();
+		assertTrue(campo.isMarcado());
+	}
+	
+	@Test
+	void testeAbrirNaoMinado() {
+		assertFalse(campo.abrir());
 	}
 }
