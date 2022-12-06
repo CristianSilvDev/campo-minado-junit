@@ -89,7 +89,7 @@ public class Campo {
 	}
 
 	public int getLinha() {
-		return linha;
+		return linha; 
 	}
 
 	public int getColuna() {

@@ -65,7 +65,7 @@ public class Tabuleiro {
 	}
 	
 	public void reiniciar() {
-		campos.stream().forEach(c -> c.reiniciar());
+		campos.stream().forEach(c -> c.reiniciar()); 
 		sortearMinas();
 	}
 	
